@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Store</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BookStore</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#orders">Orders</a></li>
+            <li><a href="#cart">Add to Cart</a></li>
+        </ul>
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" placeholder="Search books..." />
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+
+    <main>
+        <section id="home" class="book-list">
+            <h1>Available Books</h1>
+            <div class="books-container">
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=150&q=80" alt="Book 1" />
+                    <h3>The Great Gatsby</h3>
+                    <p class="price">$15.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=150&q=80" alt="Book 2" />
+                    <h3>1984</h3>
+                    <p class="price">$12.50</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1476958526483-36efcaa80a1b?auto=format&fit=crop&w=150&q=80" alt="Book 3" />
+                    <h3>To Kill a Mockingbird</h3>
+                    <p class="price">$14.25</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=150&q=80" alt="Book 4" />
+                    <h3>Harry Potter</h3>
+                    <p class="price">$18.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="book-card">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=150&q=80" alt="Book 5" />
+                    <h3>The Hobbit</h3>
+                    <p class="price">$17.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts-section">
+            <h2>Contact Us</h2>
+            <p>Email: support@bookstore.com</p>
+            <p>Phone: +1 234 567 8901</p>
+        </section>
+
+        <section id="orders" class="orders-section">
+            <h2>Your Orders</h2>
+            <p>You have no orders yet.</p>
+        </section>
+
+        <section id="cart" class="cart-section">
+            <h2>Your Cart</h2>
+            <p>Your cart is empty.</p>
+        </section>
+
+        <section id="login-signup" class="auth-section">
+            <h2>Login / Signup</h2>
+            <div class="auth-forms">
+                <form class="login-form">
+                    <h3>Login</h3>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required />
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required />
+                    <button type="submit">Login</button>
+                </form>
+
+                <form class="signup-form">
+                    <h3>Signup</h3>
+                    <label for="signup-name">Name:</label>
+                    <input type="text" id="signup-name" placeholder="Enter your name" required />
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required />
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required />
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BookStore. All rights reserved.</p>
+    </footer>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "d2c3944a-71e6-4dd5-943d-fde3a6c21b97", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "ac1d5811-e760-4c84-8bbb-399baae2a9f5", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>    
+</body>
+</html>
